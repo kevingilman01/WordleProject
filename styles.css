@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Passion One', monospace;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5,80px);
+    grid-template-rows: repeat(6,80px);
+    gap: 40px;
+}
+
+.shake {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+.box {
+    background-color: gray;
+    place-items: center;
+    display:grid;
+    font-size: 3rem;
+    border-style: solid;
+}
+
+.container {
+    height:100vh;
+    width: 100%;
+    display:grid;
+    place-items: center;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.endScreen {
+    position:absolute;
+    background-color: rgba(0,0,0,.5);
+    height: 100%;
+    width: 100%;
+    display: none;
+    place-items: center;
+}
+
+.show {
+    display:grid;
+}
+
+.endModal {
+    height: 300px;
+    width: 200px;
+    background-color: darkgray;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border-style: solid;
+    flex-direction: column;
+    gap:50px;
+}
+
+.endModal > button {
+    height: 40px;
+    width: 60px;
+    border-radius: 25px;
+    border-style: solid;
+    background-color: green;
+    border-color: black;
+    font-family: 'Passion One', monospace;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  
+  
