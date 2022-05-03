@@ -18,6 +18,14 @@ html {
     gap: 40px;
 }
 
+.grid1x2 {
+    display:grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(1,100vh);
+    justify-content: center;
+    align-items: center;
+}
+
 .shake {
     /* Start the shake animation and make the animation last for 0.5 seconds */
     animation: shake 0.5s;
@@ -39,6 +47,15 @@ html {
     width: 100%;
     display:grid;
     place-items: center;
+}
+
+.characterChart {
+    width:400px;
+    height:300px;
+    background-color: lightgray;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .yellow {
