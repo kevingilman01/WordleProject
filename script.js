@@ -5845,7 +5845,7 @@ const keyPress = (e) => {
         }
         else if(numGuesses == 6) {
             endScreen.classList.add("show")
-            endText.textContent = `You Lose`
+            endText.textContent = `You Lose,\nthe correct word was ${answer}`
             document.removeEventListener("keydown",keyPress)
         }
     }
