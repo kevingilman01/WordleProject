@@ -49,6 +49,17 @@ html {
     place-items: center;
 }
 
+.container2 {
+    height:20px;
+    width:100%;
+    display:grid;
+    place-items: center;
+}
+
+.grayScreen {
+    background-color: rgba(0,0,0,.5);
+}
+
 .characterChart {
     width:400px;
     height:300px;

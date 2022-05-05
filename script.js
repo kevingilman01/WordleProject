@@ -5779,6 +5779,7 @@ const endScreen = document.getElementById("endScreen")
 const endText = document.getElementById("endText")
 const button = document.getElementById("button")
 const charChart = document.getElementById("charChart")
+const title = document.getElementById("container2")
 
 const setup = () => {
     for(let i = 0; i < 6; i++) {
@@ -5840,11 +5841,13 @@ const keyPress = (e) => {
         console.log(temp)
         if(numCorrect == 5) {
             endScreen.classList.add("show")
+            title.classList.add("grayScreen")
             endText.textContent = `Congratulations,\nYou guessed the word in ${numGuesses} guess${numGuesses == 1 ? "" : "es"}`
             document.removeEventListener("keydown",keyPress)
         }
         else if(numGuesses == 6) {
             endScreen.classList.add("show")
+            title.classList.add("grayScreen")
             endText.textContent = `You Lose,\nthe correct word was ${answer}`
             document.removeEventListener("keydown",keyPress)
         }
@@ -5864,6 +5867,7 @@ document.addEventListener("keydown", keyPress)
 
 const resetGame = () => {
     endScreen.classList.remove("show")
+    title.classList.remove("grayScreen")
     numGuesses = 0
     arr = []
     grid.innerHTML = ""
